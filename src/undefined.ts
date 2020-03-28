@@ -9,10 +9,10 @@
  * @return The assertion result.
  * 
  * @example
- * isNull(undefined);
+ * isUndefined(undefined);
  * // > true
  * 
- * isNull(null);
+ * isUndefined(null);
  * // > false
  */
 export function isUndefined(payload: unknown): payload is undefined

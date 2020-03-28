@@ -15,13 +15,13 @@ import { isUndefined } from "./undefined";
  * @return The assertion result.
  * 
  * @example
- * isNull(null);
+ * isNullLike(null);
  * // > true
  * 
- * isNull(undefined);
+ * isNullLike(undefined);
  * // > true
  * 
- * isNull(NaN);
+ * isNullLike(NaN);
  * // > false
  */
 export function isNullLike(payload: unknown): payload is null | undefined
