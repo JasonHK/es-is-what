@@ -1,0 +1,52 @@
+{
+  "name": "@jasonhk/is-what",
+  "description": "A library for determining the type of the object.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Jason Kwok <github@jasonhk.email> (https://jasonhk.net)",
+  "homepage": "https://github.com/JasonHK/node-is-what#readme",
+  "keywords": [
+    "back-stack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonHK/node-is-what.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JasonHK/node-is-what/issues"
+  },
+  "scripts": {
+    "test": "npx jest --config=\"configs/jest.config.json\"",
+    "test:coverage": "npm run test -- --coverage",
+    "build": "npx npm-run-all -ln build:configs -p build:docs build:src",
+    "build:configs": "npx tsc --project \"configs/tsconfig.build.configs.json\"",
+    "build:docs": "npx typedoc --options \"./configs/typedoc.json\" --tsconfig \"./configs/tsconfig.build.src.json\" src",
+    "build:src": "npx run-p -ln build:src:*",
+    "build:src:bundles": "npx webpack --config configs/webpack.config.ts --mode production",
+    "build:src:library": "npx tsc --project \"./configs/tsconfig.build.src.library.json\"",
+    "build:src:declare": "npx tsc --project \"./configs/tsconfig.build.src.declare.json\"",
+    "release": "npx standard-version",
+    "prepublishOnly": "npx run-s -ln test build",
+    "clean": "npx run-s -ln clean:*",
+    "clean:build": "npx run-s -ln clean:build:*",
+    "clean:build:docs": "npx rimraf -- ./docs",
+    "clean:build:src": "npx rimraf -- \"./*.@(js?(.map)|d.ts)\" \"./!(node_modules|configs|coverage|docs|src|tests)/**/*.@(js?(.map)|d.ts)\"",
+    "clean:coverage": "npx rimraf -- ./coverage"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@jasonhk/variable-name": "0.0.2",
+    "@types/node": "13.7.x"
+  },
+  "devDependencies": {
+    "@types/jest": "25.1.x",
+    "jest": "25.1.x",
+    "npm-run-all": "4.1.x",
+    "rimraf": "3.0.x",
+    "standard-version": "7.1.x",
+    "ts-jest": "25.2.1",
+    "ts-node": "8.6.x",
+    "typedoc": "0.16.x",
+    "typescript": "3.8.x"
+  }
+}
