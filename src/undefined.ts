@@ -7,6 +7,13 @@
  * 
  * @param payload An object to be determined.
  * @return The assertion result.
+ * 
+ * @example
+ * isNull(undefined);
+ * // > true
+ * 
+ * isNull(null);
+ * // > false
  */
 export function isUndefined(payload: unknown): payload is undefined
 {

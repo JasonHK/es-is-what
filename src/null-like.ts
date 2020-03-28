@@ -13,6 +13,16 @@ import { isUndefined } from "./undefined";
  * 
  * @param payload An object to be determined.
  * @return The assertion result.
+ * 
+ * @example
+ * isNull(null);
+ * // > true
+ * 
+ * isNull(undefined);
+ * // > true
+ * 
+ * isNull(NaN);
+ * // > false
  */
 export function isNullLike(payload: unknown): payload is null | undefined
 {
