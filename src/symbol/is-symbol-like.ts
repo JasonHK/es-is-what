@@ -28,5 +28,3 @@ export function isSymbolLike(payload: unknown): payload is symbol | Symbol
         )
     );
 }
-
-export default isSymbolLike;
