@@ -6,6 +6,8 @@ import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 
 import { isAnyNumber } from "./is-any-number";
 
+import { INumberLike } from "./interfaces/number-like";
+
 /**
  * Determine whether the payload is a number-like object or not.
  * 
@@ -21,7 +23,7 @@ import { isAnyNumber } from "./is-any-number";
  * @param payload An object to be determined.
  * @returns The assertion result.
  */
-export function isAnyNumberLike(payload: unknown): payload is (number | Number)
+export function isAnyNumberLike(payload: unknown): payload is INumberLike
 {
     return (
         isAnyNumber(payload) ||

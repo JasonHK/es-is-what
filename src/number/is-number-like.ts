@@ -3,6 +3,8 @@
 import { isAnyNumberLike } from "./is-any-number-like";
 import { isNumber } from "./is-number";
 
+import { INumberLike } from "./interfaces/number-like";
+
 /**
  * Determine whether the payload is a number-like object or not.
  * 
@@ -18,7 +20,7 @@ import { isNumber } from "./is-number";
  * @param payload An object to be determined.
  * @returns The assertion result.
  */
-export function isNumberLike(payload: unknown): payload is (number | Number)
+export function isNumberLike(payload: unknown): payload is INumberLike
 {
     return (
         isNumber(payload) ||
