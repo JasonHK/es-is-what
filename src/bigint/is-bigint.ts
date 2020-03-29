@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Determine whether the payload is a `BigInt` or not.
+ * Determine whether the payload is a bigint or not.
  * 
  * @since 0.0.1
  * 
