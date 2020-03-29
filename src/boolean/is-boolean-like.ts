@@ -2,7 +2,7 @@
 
 import { TAG_BOOLEAN } from "../internal/string-tags";
 
-import { hasStringTagOf } from "../object/has-string-tag-of";
+import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 
 import { isBoolean } from "./is-boolean";
 
@@ -21,6 +21,6 @@ export function isBooleanLike(payload: unknown): payload is boolean | Boolean
 {
     return (
         isBoolean(payload) ||
-        (hasStringTagOf<Boolean>(payload, TAG_BOOLEAN) && isBoolean(payload.valueOf()))
+        (hasToStringTagOf<Boolean>(payload, TAG_BOOLEAN) && isBoolean(payload.valueOf()))
     );
 }

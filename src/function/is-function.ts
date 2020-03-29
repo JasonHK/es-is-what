@@ -2,12 +2,12 @@
 
 import { TAG_FUNCTION } from "../internal/string-tags";
 
-import { hasStringTagOf } from "../object/has-string-tag-of";
+import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 
 import { isAnyFunction } from "./is-any-function";
 import { IFunction } from "./interfaces/function";
 
 export function isFunction<T extends IFunction = IFunction>(payload: unknown): payload is T
 {
-    return (isAnyFunction(payload) && hasStringTagOf(payload, TAG_FUNCTION));
+    return (isAnyFunction(payload) && hasToStringTagOf(payload, TAG_FUNCTION));
 }
