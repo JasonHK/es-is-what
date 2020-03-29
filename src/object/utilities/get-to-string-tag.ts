@@ -11,13 +11,13 @@ export function getToStringTag(object: unknown): string
 {
     if (hasToStringTag(object)) { return object[Symbol.toStringTag]; }
 
-    const result = objectToString(object).match(TO_STRING_TAG_MATCHER);
-    if (!isNull(result))
-    {
-        return result[1];
-    }
-    else
+    const stringified = objectToString(object);
+
+    const result = stringified.match(TO_STRING_TAG_MATCHER);
+    if (isNull(result))
     {
         throw new Error();
     }
+
+    return result[1];
 }
