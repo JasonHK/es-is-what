@@ -5,7 +5,7 @@ import { IObject } from "./interfaces/object";
 import { isAnyFunction } from "../function/is-any-function";
 import { IAnyFunction } from "../function/interfaces/any-function";
 
-import { isObject } from "./object";
+import { isObject } from "./is-object";
 
 /**
  * Determine whether the payload is or is not a non-primitive object or
