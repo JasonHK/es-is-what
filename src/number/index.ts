@@ -12,3 +12,5 @@ export * from "./is-nan";
 export * from "./is-nan-like";
 export * from "./is-number";
 export * from "./is-number-like";
+export * from "./is-safe-integer";
+export * from "./is-safe-integer-like";
