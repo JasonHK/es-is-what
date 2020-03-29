@@ -1,5 +1,7 @@
 "use strict";
 
+import { isAnyNumber } from "./is-any-number";
+
 /**
  * Determine whether the payload is a number primitive or not.
  * 
@@ -14,5 +16,5 @@
  */
 export function isNumber(payload: unknown): payload is number
 {
-    return ((typeof payload === "number") && !Number.isNaN(payload));
+    return (isAnyNumber(payload) && !Number.isNaN(payload));
 }
