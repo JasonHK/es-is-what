@@ -1,7 +1,7 @@
 "use strict";
 
 import { isNull } from "./is-null";
-import { isUndefined } from "./undefined";
+import { isUndefined } from "./is-undefined";
 
 /**
  * Determine whether the payload is a null-like object or not.
