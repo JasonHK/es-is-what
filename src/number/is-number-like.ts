@@ -20,7 +20,7 @@ import { isNumber } from "./is-number";
  * @param payload An object to be determined.
  * @returns The assertion result.
  */
-export function isSymbolLike(payload: unknown): payload is symbol | Symbol
+export function isNumberLike(payload: unknown): payload is number | Number
 {
     return (
         isNumber(payload) ||
@@ -30,5 +30,3 @@ export function isSymbolLike(payload: unknown): payload is symbol | Symbol
         )
     );
 }
-
-export default isSymbolLike;
