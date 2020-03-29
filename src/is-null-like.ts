@@ -1,6 +1,6 @@
 "use strict";
 
-import { isNull } from "./null";
+import { isNull } from "./is-null";
 import { isUndefined } from "./undefined";
 
 /**
