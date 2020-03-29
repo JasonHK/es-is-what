@@ -26,9 +26,6 @@ export function isNumberLike(payload: unknown): payload is (number | Number)
 {
     return (
         isNumber(payload) ||
-        (
-            hasToStringTagOf<Number>(payload, TAG_NUMBER) &&
-            isNumber(payload.valueOf())
-        )
+        (isAnyNumberLike(payload) && isNumber(payload.valueOf()))
     );
 }
