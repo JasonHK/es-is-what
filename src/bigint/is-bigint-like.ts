@@ -4,7 +4,7 @@ import { TAG_BIG_INT } from "../internal/string-tags";
 
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 
-import { isBigInt } from "./is-big-int";
+import { isBigInt } from "./is-bigint";
 
 /**
  * Determine whether the payload is a `BigInt`-like object or not.

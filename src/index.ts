@@ -1,6 +1,6 @@
 "use strict";
 
-export * from "./big-int";
+export * from "./bigint";
 export * from "./boolean";
 export * from "./object";
 export * from "./string";
