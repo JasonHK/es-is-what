@@ -1,5 +1,8 @@
 "use strict";
 
-export * from "./null";
-export * from "./null-like";
-export * from "./undefined";
+export * from "./boolean";
+export * from "./string";
+
+export * from "./is-null";
+export * from "./is-null-like";
+export * from "./is-undefined";
