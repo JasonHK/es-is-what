@@ -2,10 +2,10 @@
 
 import { isNull } from "../../is-null";
 
-import { TO_STRING_TAG_MATCHER } from "../constants";
+import { TO_STRING_TAG_MATCHER } from "../../internal/constants";
 
-import { hasToStringTag } from "./has-to-string-tag";
-import { objectToString } from "./object-to-string";
+import { hasToStringTag } from "../../internal/utilities/has-to-string-tag";
+import { objectToString } from "../../internal/utilities/object-to-string";
 
 export function getToStringTag(object: unknown): string
 {
