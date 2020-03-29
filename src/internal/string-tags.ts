@@ -80,7 +80,7 @@ export const TAG_ASYNC_GENERATOR = "AsyncGenerator";
 // Iterators
 //--------------------------------------------------------------------------------------------------
 
-export const TAG_TERATOR = "Iterator";
+export const TAG_ITERATOR = "Iterator";
 
 export const TAG_ARRAY__ITERATOR = "Array Iterator";
 
