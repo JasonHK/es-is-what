@@ -10,8 +10,7 @@ import { isSymbol } from "./is-symbol";
  * Determine whether the payload is a symbol-like object or not.
  * 
  * @remarks
- * Symbol-like means the payload is either a `symbol` or an object wrapped
- * `symbol` primitive.
+ * Symbol-like means the payload is either a symbol or an object wrapped symbol primitive.
  * 
  * @since 0.0.1
  * 
