@@ -15,5 +15,3 @@ export function isNumber(payload: unknown): payload is number
 {
     return ((typeof payload === "number") && !Number.isNaN(payload));
 }
-
-export default isAnyNumber;
