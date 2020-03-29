@@ -2,6 +2,8 @@
 
 import { isNull } from "../is-null";
 
+import { IObject } from "./interfaces/object";
+
 /**
  * Determine whether the payload is or is not a non-primitive object except for function.
  * 
@@ -14,7 +16,7 @@ import { isNull } from "../is-null";
  * @param payload An object to be determined.
  * @return The assertion result.
  */
-export function isObject<T extends object = object>(payload: unknown): payload is T
+export function isObject<T extends object = IObject>(payload: unknown): payload is T
 {
     return ((typeof payload === "object") && !isNull(payload));
 }
