@@ -4,6 +4,7 @@ import { TAG_NUMBER } from "../internal/string-tags";
 
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 
+import { isAnyNumberLike } from "./is-any-number-like";
 import { isNumber } from "./is-number";
 
 /**
