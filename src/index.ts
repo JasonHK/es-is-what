@@ -12,5 +12,6 @@ export * from "./object";
 export * from "./arguments";
 export * from "./array";
 export * from "./function";
+export * from "./iterable";
 export * from "./iterator";
 export * from "./map";
