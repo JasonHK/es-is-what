@@ -5,7 +5,7 @@ import { isAnyObject } from "../object/is-any-object";
 
 import { IObject } from "../object/interfaces/object";
 
-import { IIteratorLike } from "./interface/iterator-like";
+import { IIteratorLike } from "./interfaces/iterator-like";
 
 export function isIteratorLike<T extends IIteratorLike = IIteratorLike>(payload: unknown): payload is T
 {
