@@ -17,3 +17,4 @@ export * from "./iterable";
 export * from "./iterator";
 export * from "./map";
 export * from "./promise";
+export * from "./set";
