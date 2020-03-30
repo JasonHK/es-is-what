@@ -1,5 +1,6 @@
 "use strict";
 
+export * from "./primitive";
 export * from "./bigint";
 export * from "./boolean";
 export * from "./null";
@@ -15,3 +16,4 @@ export * from "./function";
 export * from "./iterable";
 export * from "./iterator";
 export * from "./map";
+export * from "./promise";
