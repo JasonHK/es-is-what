@@ -18,3 +18,4 @@ export * from "./iterator";
 export * from "./map";
 export * from "./promise";
 export * from "./set";
+export * from "./typed-array";
