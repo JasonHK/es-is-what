@@ -9,4 +9,6 @@ export * from "./symbol";
 export * from "./undefined";
 
 export * from "./object";
+export * from "./arguments";
 export * from "./array";
+export * from "./function";
