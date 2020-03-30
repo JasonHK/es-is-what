@@ -3,9 +3,12 @@
 import { isAnyFunction } from "../function/is-any-function";
 import { isAnyObject } from "../object/is-any-object";
 
-export function isIterable<T = unknown>(payload: unknown): payload is Iterable<T>
+import { IIterable } from "./interfaces/iterable";
+
+export function isIterable<T extends IIterable = IIterable>(payload: unknown): payload is IIterable
 {
     return (
-        isAnyObject<Iterable<T>>(payload) && isAnyFunction(payload[Symbol.iterator])
+        isAnyObject<T>(payload) &&
+        (Reflect.has(payload, Symbol.iterator) && isAnyFunction(payload[Symbol.iterator]))
     );
 }
