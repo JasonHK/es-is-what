@@ -1,6 +1,6 @@
 "use strict";
 
-import { isNull } from "../is-null";
+import { isNull } from "../null/is-null";
 
 import { IObject } from "./interfaces/object";
 

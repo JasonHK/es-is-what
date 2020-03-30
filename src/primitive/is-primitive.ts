@@ -1,13 +1,12 @@
 "use strict";
 
-import { isNull } from "../is-null";
-import { isUndefined } from "../is-undefined";
-
 import { isBigInt } from "../bigint/is-bigint";
 import { isBoolean } from "../boolean/is-boolean";
+import { isNull } from "../null/is-null";
 import { isNumber } from "../number/is-number";
 import { isString } from "../string/is-string";
 import { isSymbol } from "../symbol/is-symbol";
+import { isUndefined } from "../undefined/is-undefined";
 
 import { IPrimitive } from "./interfaces/primitive";
 
