@@ -1,6 +1,6 @@
 "use strict";
 
-import { isSafeInteger } from "../is-safe-integer";
+import { isSafeInteger } from "../../number/is-safe-integer";
 
 export function isValidLength(value: number): boolean;
 export function isValidLength(value: unknown): value is number;

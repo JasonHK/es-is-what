@@ -1,6 +1,7 @@
 "use strict";
 
 export * from "./interfaces";
+export * from "./utilities";
 
 export * from "./is-array";
 export * from "./is-array-like";
