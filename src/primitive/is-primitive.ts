@@ -30,7 +30,20 @@ import { IPrimitive } from "./interfaces/primitive";
  * @since 0.0.1
  * 
  * @param payload An object to be determined.
- * @return The assertion result.
+ * @returns The assertion result.
+ * 
+ * @example
+ * isPrimitive(false);
+ * // > true
+ * 
+ * isPrimitive(1337);
+ * // > true
+ * 
+ * isPrimitive("Hello, world!");
+ * // > true
+ * 
+ * isPrimitive({});
+ * // > false
  */
 export function isPrimitive(payload: unknown): payload is IPrimitive
 {
