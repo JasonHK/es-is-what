@@ -3,10 +3,7 @@
 import { isNullLike } from "../null/is-null-like";
 import { isAnyFunction } from "../function/is-any-function";
 
-import { IObject } from "../object/interfaces/object";
-
 import { IArrayLike } from "./interfaces/array-like";
-
 import { isValidLength } from "./utilities/is-valid-length";
 
 /**
@@ -39,6 +36,6 @@ export function isArrayLike<T extends IArrayLike = IArrayLike>(payload: unknown)
 {
     return (
         (!isNullLike(payload) && !isAnyFunction(payload)) &&
-        isValidLength((payload as IObject).length)
+        isValidLength((payload as IArrayLike).length)
     );
 }
