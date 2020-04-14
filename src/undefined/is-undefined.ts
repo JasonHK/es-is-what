@@ -14,6 +14,9 @@
  * 
  * isUndefined(null);
  * // > false
+ * 
+ * isUndefined({});
+ * // > false
  */
 export function isUndefined(payload: unknown): payload is undefined
 {

@@ -10,10 +10,21 @@ import { isObject } from "../object/is-object";
  * @template T The expected type of the `Array`.
  * @param payload An object to be determined.
  * @returns The assertion result.
+ * 
+ * @example
+ * isArray([]);
+ * // > true
+ * 
+ * isArray("Hello, world!");
+ * // > false
+ * 
+ * isArray(new Uint8Array());
+ * // > false
+ * 
+ * isArray({});
+ * // > false
  */
 export function isArray<T extends unknown[] = unknown[]>(payload: unknown): payload is T
 {
     return isObject(payload) && Array.isArray(payload);
 }
-
-export default isArray;

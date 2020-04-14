@@ -14,6 +14,9 @@
  * 
  * isNull(undefined);
  * // > false
+ * 
+ * isNull({});
+ * // > false
  */
 export function isNull(payload: unknown): payload is null
 {
