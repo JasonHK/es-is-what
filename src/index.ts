@@ -13,6 +13,7 @@ export * from "./object";
 export * from "./arguments";
 export * from "./array";
 export * from "./array-buffer";
+export * from "./data-view";
 export * from "./descriptor";
 export * from "./function";
 export * from "./iterable";
