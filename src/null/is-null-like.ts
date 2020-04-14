@@ -22,7 +22,7 @@ import { isNull } from "./is-null";
  * isNullLike(undefined);
  * // > true
  * 
- * isNullLike(NaN);
+ * isNullLike({});
  * // > false
  */
 export function isNullLike(payload: unknown): payload is null | undefined
