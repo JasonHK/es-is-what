@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Representing a primitive object.
+ * Representing a primitive value.
  * 
  * @remarks
  * Primitive means the payload is not an `Object` and has no methods.
