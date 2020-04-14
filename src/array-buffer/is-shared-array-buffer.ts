@@ -1,9 +1,9 @@
 "use strict";
 
+import { TAG_SHARED_ARRAY_BUFFER } from "../_internal/string-tags";
+
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 import { isInstanceOf } from "../object/utilities/is-instance-of";
-
-import { TAG_SHARED_ARRAY_BUFFER } from "../internal/string-tags";
 
 export function isSharedArrayBuffer(payload: unknown): payload is SharedArrayBuffer
 {

@@ -1,11 +1,10 @@
 "use strict";
 
+import { TO_STRING_TAG_MATCHER } from "../../_internal/constants";
+import { hasToStringTag } from "../../_internal/utilities/has-to-string-tag";
+import { objectToString } from "../../_internal/utilities/object-to-string";
+
 import { isNull } from "../../null/is-null";
-
-import { TO_STRING_TAG_MATCHER } from "../../internal/constants";
-
-import { hasToStringTag } from "../../internal/utilities/has-to-string-tag";
-import { objectToString } from "../../internal/utilities/object-to-string";
 
 export function getToStringTag(object: unknown): string
 {

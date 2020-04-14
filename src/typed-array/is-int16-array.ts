@@ -1,9 +1,9 @@
 "use strict";
 
+import { TAG_INT16_ARRAY } from "../_internal/string-tags";
+
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 import { isInstanceOf } from "../object/utilities/is-instance-of";
-
-import { TAG_INT16_ARRAY } from "../internal/string-tags";
 
 export function isInt16Array(payload: unknown): payload is Int16Array
 {

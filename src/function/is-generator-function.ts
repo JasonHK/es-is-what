@@ -1,6 +1,6 @@
 "use strict";
 
-import { TAG_GENERATOR_FUNCTION } from "../internal/string-tags";
+import { TAG_GENERATOR_FUNCTION } from "../_internal/string-tags";
 
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 

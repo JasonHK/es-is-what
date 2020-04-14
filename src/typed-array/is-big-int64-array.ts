@@ -1,9 +1,9 @@
 "use strict";
 
+import { TAG_BIG_INT64_ARRAY } from "../_internal/string-tags";
+
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 import { isInstanceOf } from "../object/utilities/is-instance-of";
-
-import { TAG_BIG_INT64_ARRAY } from "../internal/string-tags";
 
 export function isBigInt64Array(payload: unknown): payload is BigInt64Array
 {

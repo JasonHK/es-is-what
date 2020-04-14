@@ -1,13 +1,12 @@
 "use strict";
 
+import { TAG_ARGUMENTS } from "../_internal/string-tags";
+import { objectHasOwnProperty } from "../_internal/utilities/object-has-own-property";
+import { objectPropertyIsEnumerable } from "../_internal/utilities/object-property-is-enumerable";
+
 import { isArrayLikeObject } from "../array/is-array-like-object";
 
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
-
-import { TAG_ARGUMENTS } from "../internal/string-tags";
-
-import { objectHasOwnProperty } from "../internal/utilities/object-has-own-property";
-import { objectPropertyIsEnumerable } from "../internal/utilities/object-property-is-enumerable";
 
 export function isArguments(payload: unknown): payload is IArguments
 {

@@ -1,9 +1,9 @@
 "use strict";
 
+import { TAG_ARRAY_BUFFER } from "../_internal/string-tags";
+
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 import { isInstanceOf } from "../object/utilities/is-instance-of";
-
-import { TAG_ARRAY_BUFFER } from "../internal/string-tags";
 
 export function isArrayBuffer(payload: unknown): payload is ArrayBuffer
 {
