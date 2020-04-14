@@ -5,7 +5,7 @@
  * 
  * @since 0.0.1
  * 
- * @param payload An object to be determined.
+ * @param payload An value to be determined.
  * @returns The assertion result.
  * 
  * @example
