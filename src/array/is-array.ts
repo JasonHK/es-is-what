@@ -8,7 +8,7 @@ import { isObject } from "../object/is-object";
  * @since 0.0.1
  * 
  * @template T The expected type of the `Array`.
- * @param payload An object to be determined.
+ * @param payload An value to be determined.
  * @returns The assertion result.
  * 
  * @example
