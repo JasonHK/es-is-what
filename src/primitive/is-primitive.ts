@@ -14,7 +14,7 @@ import { IPrimitive } from "./interfaces/primitive";
  * Determine whether the payload is a primitive value or not.
  * 
  * @remarks
- * Primitive means the payload is not an `Object` and has no methods.
+ * Primitive means the payload is not an object and has no methods.
  * 
  * @remarks
  * The primitive types JavaScript currently have were:
@@ -29,7 +29,7 @@ import { IPrimitive } from "./interfaces/primitive";
  * 
  * @since 0.0.1
  * 
- * @param payload An object to be determined.
+ * @param payload An value to be determined.
  * @returns The assertion result.
  * 
  * @example
