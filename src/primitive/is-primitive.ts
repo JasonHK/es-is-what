@@ -3,7 +3,7 @@
 import { isBigInt } from "../bigint/is-bigint";
 import { isBoolean } from "../boolean/is-boolean";
 import { isNull } from "../null/is-null";
-import { isNumber } from "../number/is-number";
+import { isAnyNumber } from "../number/is-any-number";
 import { isString } from "../string/is-string";
 import { isSymbol } from "../symbol/is-symbol";
 import { isUndefined } from "../undefined/is-undefined";
@@ -51,7 +51,7 @@ export function isPrimitive(payload: unknown): payload is IPrimitive
         isBigInt(payload)    ||
         isBoolean(payload)   ||
         isNull(payload)      ||
-        isNumber(payload)    ||
+        isAnyNumber(payload) ||
         isString(payload)    ||
         isSymbol(payload)    ||
         isUndefined(payload)
