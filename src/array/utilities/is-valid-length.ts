@@ -5,7 +5,7 @@ import { isSafeInteger } from "../../number/is-safe-integer";
 /**
  * Determine whether the payload is a valid length value or not.
  * 
- * @remarks
+ * @notes
  * A valid length value is an integer between `0` and `Number.MAX_SAFE_INTEGER` (inclusive).
  * 
  * @since 0.0.1
@@ -31,7 +31,7 @@ export function isValidLength(value: number): boolean;
 /**
  * Determine whether the payload is a valid length value or not.
  * 
- * @remarks
+ * @notes
  * A valid length value is an integer between `0` and `Number.MAX_SAFE_INTEGER` (inclusive).
  * 
  * @since 0.0.1
