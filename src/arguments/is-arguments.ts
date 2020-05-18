@@ -8,6 +8,8 @@ import { isArrayLikeObject } from "../array/is-array-like-object";
 
 import { hasToStringTagOf } from "../object/utilities/has-to-string-tag-of";
 
+import type { IArguments } from "./interfaces/arguments";
+
 export function isArguments(payload: unknown): payload is IArguments
 {
     return (
