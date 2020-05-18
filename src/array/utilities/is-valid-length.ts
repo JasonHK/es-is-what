@@ -14,6 +14,7 @@ import { isSafeInteger } from "../../number/is-safe-integer";
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isValidLength(0);
  * // > true
  * 
@@ -25,6 +26,7 @@ import { isSafeInteger } from "../../number/is-safe-integer";
  * 
  * isValidLength(Number.MAX_SAFE_INTEGER + 1);
  * // > false
+ * ```
  */
 export function isValidLength(value: number): boolean;
 
@@ -40,6 +42,7 @@ export function isValidLength(value: number): boolean;
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isValidLength(0);
  * // > true
  * 
@@ -51,6 +54,7 @@ export function isValidLength(value: number): boolean;
  * 
  * isValidLength(Number.MAX_SAFE_INTEGER + 1);
  * // > false
+ * ```
  */
 export function isValidLength(value: unknown): value is number;
 
