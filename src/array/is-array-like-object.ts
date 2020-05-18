@@ -19,6 +19,7 @@ import { IArrayLikeObject } from "./interfaces/array-like-object";
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isArray([]);
  * // > true
  * 
@@ -30,6 +31,7 @@ import { IArrayLikeObject } from "./interfaces/array-like-object";
  * 
  * isArray({});
  * // > false
+ * ```
  */
 export function isArrayLikeObject<T extends IArrayLikeObject = IArrayLikeObject>(payload: unknown): payload is T
 {

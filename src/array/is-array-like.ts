@@ -20,6 +20,7 @@ import { isValidLength } from "./utilities/is-valid-length";
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isArray([]);
  * // > true
  * 
@@ -31,6 +32,7 @@ import { isValidLength } from "./utilities/is-valid-length";
  * 
  * isArray({});
  * // > false
+ * ```
  */
 export function isArrayLike<T extends IArrayLike = IArrayLike>(payload: unknown): payload is T
 {

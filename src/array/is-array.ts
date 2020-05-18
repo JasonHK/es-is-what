@@ -12,6 +12,7 @@ import { isObject } from "../object/is-object";
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isArray([]);
  * // > true
  * 
@@ -23,6 +24,7 @@ import { isObject } from "../object/is-object";
  * 
  * isArray({});
  * // > false
+ * ```
  */
 export function isArray<T extends unknown[] = unknown[]>(payload: unknown): payload is T
 {
