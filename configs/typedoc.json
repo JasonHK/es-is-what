@@ -1,0 +1,7 @@
+{
+    "mode": "modules",
+    "out": "docs",
+    "exclude": "**/*+(index).ts",
+    "includeDeclarations": false,
+    "excludePrivate": true
+}
