@@ -7,7 +7,7 @@ import { isNull } from "./is-null";
 /**
  * Determine whether the payload is a null-like value or not.
  * 
- * @remarks
+ * @notes
  * Null-like means the payload is either `null` or `undefined`.
  * 
  * @since 0.0.1
