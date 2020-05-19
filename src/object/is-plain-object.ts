@@ -1,5 +1,7 @@
 "use strict";
 
+import { isNull } from "../null/is-null";
+
 import { isObject } from "./is-object";
 
 import { IObject } from "./interfaces/object";
@@ -21,5 +23,5 @@ export function isPlainObject<T extends object = IObject>(payload: unknown): pay
     if (!isObject(payload)) { return false; }
 
     const prototype = Reflect.getPrototypeOf(payload);
-    return ((prototype === null) || (prototype === Object.prototype));
+    return (isNull(prototype) || (prototype === Object.prototype));
 }
