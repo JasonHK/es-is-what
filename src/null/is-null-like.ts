@@ -5,7 +5,7 @@ import { isUndefined } from "../undefined/is-undefined";
 import { isNull } from "./is-null";
 
 /**
- * Determine whether the payload is a null-like object or not.
+ * Determine whether the payload is a null-like value or not.
  * 
  * @remarks
  * Null-like means the payload is either `null` or `undefined`.
@@ -16,6 +16,7 @@ import { isNull } from "./is-null";
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isNullLike(null);
  * // > true
  * 
@@ -24,6 +25,7 @@ import { isNull } from "./is-null";
  * 
  * isNullLike({});
  * // > false
+ * ```
  */
 export function isNullLike(payload: unknown): payload is null | undefined
 {

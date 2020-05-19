@@ -9,6 +9,7 @@
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isNull(null);
  * // > true
  * 
@@ -17,6 +18,7 @@
  * 
  * isNull({});
  * // > false
+ * ```
  */
 export function isNull(payload: unknown): payload is null
 {

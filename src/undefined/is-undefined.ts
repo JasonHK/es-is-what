@@ -9,6 +9,7 @@
  * @returns The assertion result.
  * 
  * @example
+ * ```typescript
  * isUndefined(undefined);
  * // > true
  * 
@@ -17,6 +18,7 @@
  * 
  * isUndefined({});
  * // > false
+ * ```
  */
 export function isUndefined(payload: unknown): payload is undefined
 {
