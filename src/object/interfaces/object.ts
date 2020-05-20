@@ -1,9 +1,8 @@
 "use strict";
 
 /**
- * Representing a non-primitive object created by the `{}` object literal notation, or constructed
- * with `new Object()`.
+ * Representing a non-primitive object.
  * 
  * @since 0.0.1
  */
-export type IObject = Record<string | number | symbol, unknown>;
+export type IObject = Record<PropertyKey, unknown>;
