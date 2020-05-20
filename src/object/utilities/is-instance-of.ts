@@ -1,7 +1,6 @@
 "use strict";
 
 import { isAnyFunction } from "../../function/is-any-function";
-import { isPrimitive } from "../../primitive/is-primitive";
 
 import { IAnyFunction } from "../../function/interfaces/any-function";
 import { IClass } from "../../function/interfaces/class";
