@@ -6,7 +6,11 @@ import { isPrimitive } from "../../primitive/is-primitive";
 import { IAnyFunction } from "../../function/interfaces/any-function";
 import { IClass } from "../../function/interfaces/class";
 
-export function isInstanceOf<TConstructor extends IAnyFunction, TInstance = TConstructor extends IClass ? InstanceType<TConstructor> : TConstructor>(object: unknown, constructor: TConstructor): object is TInstance
+export function isInstanceOf<
+    TConstructor extends IAnyFunction,
+    TInstance = TConstructor extends IClass ? InstanceType<TConstructor> : TConstructor
+>(
+    object: unknown, constructor: TConstructor): object is TInstance
 {
     if (!isAnyFunction(constructor))
     {
