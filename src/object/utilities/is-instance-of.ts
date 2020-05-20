@@ -13,5 +13,5 @@ export function isInstanceOf<TConstructor extends IAnyFunction, TInstance = TCon
         throw new TypeError();
     }
 
-    return (!isPrimitive(object) && (object instanceof constructor));
+    return (object instanceof constructor);
 }
