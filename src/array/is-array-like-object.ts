@@ -35,5 +35,5 @@ import { IArrayLikeObject } from "./interfaces/array-like-object";
  */
 export function isArrayLikeObject<T extends IArrayLikeObject = IArrayLikeObject>(payload: unknown): payload is T
 {
-    return (isObject(payload) && isArrayLike(payload));
+    return (isArrayLike(payload) && isObject(payload));
 }

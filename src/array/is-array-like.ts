@@ -1,10 +1,10 @@
 "use strict";
 
-import { isNullLike } from "../null/is-null-like";
 import { isAnyFunction } from "../function/is-any-function";
+import { isNullLike } from "../null/is-null-like";
+import { isValidLength } from "../utilities/is-valid-length";
 
 import { IArrayLike } from "./interfaces/array-like";
-import { isValidLength } from "./utilities/is-valid-length";
 
 /**
  * Determine whether the payload is an array-like value or not.
