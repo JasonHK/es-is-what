@@ -1,8 +1,8 @@
 "use strict";
 
 import { TAG_ARGUMENTS } from "../_internal/string-tags";
-import { objectHasOwnProperty } from "../_internal/utilities/object-has-own-property";
-import { objectPropertyIsEnumerable } from "../_internal/utilities/object-property-is-enumerable";
+import { hasOwnProperty } from "../_internal/utilities/object/has-own-property";
+import { propertyIsEnumerable } from "../_internal/utilities/object/property-is-enumerable";
 
 import { isArrayLikeObject } from "../array/is-array-like-object";
 
@@ -37,9 +37,9 @@ export function isArguments(payload: unknown): payload is IArguments
 {
     return (
         isArrayLikeObject(payload) &&
-        objectHasOwnProperty(payload, "callee") &&
+        hasOwnProperty(payload, "callee") &&
         (
-            !objectPropertyIsEnumerable(payload, "callee") ||
+            !propertyIsEnumerable(payload, "callee") ||
             hasToStringTagOf(payload, TAG_ARGUMENTS)
         )
     );

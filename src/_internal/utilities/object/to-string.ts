@@ -2,7 +2,7 @@
 
 const toStringNative = Object.prototype.toString;
 
-export function objectToString(object: unknown): string
+export function toString(object: unknown): string
 {
     return toStringNative.call(object);
 }

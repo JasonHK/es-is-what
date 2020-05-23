@@ -2,7 +2,7 @@
 
 import { TO_STRING_TAG_MATCHER } from "../../_internal/constants";
 import { hasToStringTag } from "../../_internal/utilities/has-to-string-tag";
-import { objectToString } from "../../_internal/utilities/object-to-string";
+import { toString } from "../../_internal/utilities/object/to-string";
 
 import { isNull } from "../../null/is-null";
 
@@ -10,7 +10,7 @@ export function getToStringTag(object: unknown): string
 {
     if (hasToStringTag(object)) { return object[Symbol.toStringTag]; }
 
-    const stringified = objectToString(object);
+    const stringified = toString(object);
 
     const result = stringified.match(TO_STRING_TAG_MATCHER);
     if (isNull(result))

@@ -2,7 +2,7 @@
 
 const hasOwnPropertyNative = Object.prototype.hasOwnProperty;
 
-export function objectHasOwnProperty(object: object, key: string | number | symbol): boolean
+export function hasOwnProperty(object: object, key: string | number | symbol): boolean
 {
     return hasOwnPropertyNative.call(object, key);
 }
