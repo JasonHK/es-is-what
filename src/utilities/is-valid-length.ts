@@ -1,6 +1,6 @@
 "use strict";
 
-import { isSafeInteger } from "../../number/is-safe-integer";
+import { isSafeInteger } from "../number/is-safe-integer";
 
 /**
  * Determine whether the payload is a valid length value or not.
