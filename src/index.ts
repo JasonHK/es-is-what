@@ -23,3 +23,5 @@ export * from "./promise";
 export * from "./reg-exp";
 export * from "./set";
 export * from "./typed-array";
+
+export * from "./utilities";
