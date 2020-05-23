@@ -1,16 +1,14 @@
 {
-    "extends": "./tsconfig.build.json",
+    "extends": "@jasonhk/typescript-config",
     "compilerOptions": {
         "rootDir": "../src",
         "lib": [
-            "DOM",
-            "ES2015",
+            "DOM"
         ],
-        "alwaysStrict": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
+        "declaration": true,
+        "declarationMap": true
     },
     "include": [
-        "../src/**/*.ts",
-    ],
+        "../src/**/*.ts"
+    ]
 }
