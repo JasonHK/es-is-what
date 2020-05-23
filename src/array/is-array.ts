@@ -1,5 +1,7 @@
 import { isObject } from "../object/is-object";
 
+import type { IArray } from "./interfaces/array";
+
 /**
  * Determine whether the payload is an `Array` object or not.
  * 
@@ -24,7 +26,7 @@ import { isObject } from "../object/is-object";
  * // > false
  * ```
  */
-export function isArray<T extends unknown[] = unknown[]>(payload: unknown): payload is T
+export function isArray<T extends IArray = IArray>(payload: unknown): payload is T
 {
     return isObject(payload) && Array.isArray(payload);
 }
