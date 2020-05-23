@@ -10,5 +10,7 @@ import { IArrayLike } from "./array-like";
  * between `0` and `Number.MAX_SAFE_INTEGER` (inclusive).
  * 
  * @since 0.0.1
+ * 
+ * @template T The expected type of the array-like value.
  */
-export type IArrayLikeObject = object & IArrayLike;
+export type IArrayLikeObject<T extends IArrayLike = IArrayLike> = object & T;

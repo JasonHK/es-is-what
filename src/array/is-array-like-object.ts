@@ -3,6 +3,7 @@
 import { isObject } from "../object/is-object";
 
 import { isArrayLike } from "./is-array-like";
+import { IArrayLike } from "./interfaces/array-like";
 import { IArrayLikeObject } from "./interfaces/array-like-object";
 
 /**
@@ -33,7 +34,7 @@ import { IArrayLikeObject } from "./interfaces/array-like-object";
  * // > false
  * ```
  */
-export function isArrayLikeObject<T extends IArrayLikeObject = IArrayLikeObject>(payload: unknown): payload is T
+export function isArrayLikeObject<T extends IArrayLikeObject = IArrayLike>(payload: unknown): payload is IArrayLikeObject<T>
 {
     return (isArrayLike(payload) && isObject(payload));
 }
