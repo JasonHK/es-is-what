@@ -8,7 +8,7 @@ import { IHasToStringTag } from "../interfaces/has-to-string-tag";
 export function hasToStringTag(object: unknown): object is IHasToStringTag
 {
     return (
-        isAnyObject(object) &&
+        isAnyObject<IHasToStringTag>(object) &&
         (Reflect.has(object, Symbol.toStringTag) && isString(object[Symbol.toStringTag]))
     );
 }
