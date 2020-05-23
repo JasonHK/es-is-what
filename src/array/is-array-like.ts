@@ -1,5 +1,3 @@
-"use strict";
-
 import { isAnyFunction } from "../function/is-any-function";
 import { isNullLike } from "../null/is-null-like";
 import { isValidLength } from "../utilities/is-valid-length";

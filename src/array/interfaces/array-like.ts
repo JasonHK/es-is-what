@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Representing an array-like value.
  * 

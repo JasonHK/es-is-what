@@ -1,5 +1,3 @@
-"use strict";
-
 import { isObject } from "../object/is-object";
 
 import { isArrayLike } from "./is-array-like";
