@@ -1,1 +1,1 @@
-export type { IArguments } from "./arguments";
+export * from "./arguments";
