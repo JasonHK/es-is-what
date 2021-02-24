@@ -1,54 +1,49 @@
 {
   "name": "@jasonhk/is-what",
-  "description": "A library for determining the type of the object.",
   "version": "0.0.1",
-  "license": "MIT",
-  "author": "Jason Kwok <github@jasonhk.email> (https://jasonhk.net)",
-  "homepage": "https://github.com/JasonHK/node-is-what#readme",
+  "description": "A library for determining the type of the object.",
   "keywords": [
     "back-stack"
   ],
+  "homepage": "https://github.com/JasonHK/node-is-what#readme",
+  "bugs": {
+    "url": "https://github.com/JasonHK/node-is-what/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JasonHK/node-is-what.git"
   },
-  "bugs": {
-    "url": "https://github.com/JasonHK/node-is-what/issues"
-  },
-  "scripts": {
-    "test": "npx jest --config=\"configs/jest.config.json\"",
-    "test:coverage": "npm run test -- --coverage",
-    "build": "npx npm-run-all -ln build:configs -p build:docs build:src",
-    "build:configs": "npx tsc --project \"configs/tsconfig.build.configs.json\"",
-    "build:docs": "npx typedoc --options \"./configs/typedoc.json\" --tsconfig \"./configs/tsconfig.build.src.json\" src",
-    "build:src": "npx run-p -ln build:src:*",
-    "build:src:bundles": "npx webpack --config configs/webpack.config.ts --mode production",
-    "build:src:library": "npx tsc --project \"./configs/tsconfig.build.src.library.json\"",
-    "build:src:declare": "npx tsc --project \"./configs/tsconfig.build.src.declare.json\"",
-    "release": "npx standard-version",
-    "prepublishOnly": "npx run-s -ln test build",
-    "clean": "npx run-s -ln clean:*",
-    "clean:build": "npx run-s -ln clean:build:*",
-    "clean:build:docs": "npx rimraf -- ./docs",
-    "clean:build:src": "npx rimraf -- \"./*.@(js?(.map)|d.ts)\" \"./!(node_modules|configs|coverage|docs|src|tests)/**/*.@(js?(.map)|d.ts)\"",
-    "clean:coverage": "npx rimraf -- ./coverage"
-  },
+  "license": "MIT",
+  "author": "Jason Kwok <github@jasonhk.email> (https://jasonhk.net)",
   "main": "index.js",
+  "scripts": {
+    "postinstall": "ts-patch install",
+    "test": "jest --config ./.configs/jest.config.json",
+    "test:coverage": "yon run test -- --coverage",
+    "build:declare": "tsc --project ./.configs/tsconfig.build.declare.json"
+  },
   "dependencies": {
-    "@jasonhk/variable-name": "0.0.2",
-    "@types/node": "^14.0.1"
+    "call-bind": "^1.0.2",
+    "get-intrinsic": "^1.1.1",
+    "type-fest": "^0.20.2"
   },
   "devDependencies": {
-    "@jasonhk/typescript-config": "^1.0.1",
-    "@types/jest": "^25.2.2",
-    "jest": "^26.0.1",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "standard-version": "^8.0.0",
-    "ts-jest": "26.0.0",
-    "ts-node": "^8.10.1",
-    "typedoc": "^0.17.7",
-    "typedoc-plugin-external-module-name": "^3.1.0",
-    "typescript": "^3.9.2"
+    "@jasonhk/typescript-config": "^2.0.0",
+    "@types/call-bind": "^1.0.0",
+    "@types/get-intrinsic": "^1.0.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "@types/ts-nameof": "^4.2.1",
+    "jest": "^26.6.3",
+    "jest-chain": "^1.1.5",
+    "jest-extended": "^0.11.5",
+    "standard-version": "^9.1.1",
+    "ts-jest": "^26.5.1",
+    "ts-nameof": "^5.0.0",
+    "ts-node": "^9.1.1",
+    "ts-patch": "^1.3.2",
+    "typedoc": "^0.20.28",
+    "typescript": "^4.1.5",
+    "typescript-transform-paths": "^2.2.3"
   }
 }
