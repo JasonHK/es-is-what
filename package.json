@@ -20,7 +20,7 @@
   "scripts": {
     "postinstall": "ts-patch install",
     "test": "jest --config ./.configs/jest.config.json",
-    "test:coverage": "yon run test -- --coverage",
+    "test:coverage": "npm run test -- --coverage",
     "build:declare": "tsc --project ./.configs/tsconfig.build.declare.json"
   },
   "dependencies": {
