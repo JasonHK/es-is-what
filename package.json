@@ -3,15 +3,16 @@
   "version": "0.0.1",
   "description": "A library for determining the type of the object.",
   "keywords": [
-    "back-stack"
+    "is",
+    "check"
   ],
-  "homepage": "https://github.com/JasonHK/node-is-what#readme",
+  "homepage": "https://github.com/JasonHK/es-is-what#readme",
   "bugs": {
-    "url": "https://github.com/JasonHK/node-is-what/issues"
+    "url": "https://github.com/JasonHK/es-is-what/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JasonHK/node-is-what.git"
+    "url": "git+https://github.com/JasonHK/es-is-what.git"
   },
   "license": "MIT",
   "author": "Jason Kwok <github@jasonhk.email> (https://jasonhk.net)",
