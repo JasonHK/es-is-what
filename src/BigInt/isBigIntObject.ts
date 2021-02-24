@@ -1,5 +1,6 @@
 import callBound from "call-bind/callBound";
 
+import noopFalse from "../_helpers/noopFalse";
 import type BoxedPrimitive from "../Primitive/BoxedPrimitive";
 
 import isBigInt from "./isBigInt";
@@ -24,7 +25,7 @@ if ($valueOf)
 }
 else
 {
-    isBigIntObject = ((_) => false) as IsBigIntObject;
+    isBigIntObject = noopFalse as IsBigIntObject;
 }
 
 export default isBigIntObject;
