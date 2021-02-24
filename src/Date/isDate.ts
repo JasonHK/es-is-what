@@ -1,10 +1,10 @@
-import callBoundIntrinsic from "call-bind/callBound";
+import callBound from "call-bind/callBound";
 
 /**
  * The call-bound version of the [`Date.prototype.valueOf`](https://tc39.es/ecma262/#sec-date.prototype.valueof)
  * function. Used to check for the existence of the `[[DateValue]]` internal slot.
  */
-const $valueOf = callBoundIntrinsic("%Date.prototype.valueOf%");
+const $valueOf = callBound("%Date.prototype.valueOf%");
 
 /**
  * Determine whether the payload is a `Date` object or not.
