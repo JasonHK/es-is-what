@@ -1,0 +1,29 @@
+{
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "rootDir": "../",
+    "roots": [
+        "<rootDir>"
+    ],
+    "modulePaths": [
+        "<rootDir>"
+    ],
+    "moduleNameMapper": {
+        "#src/(.*)": "<rootDir>/src/$1"
+    },
+    "setupFilesAfterEnv": ["<rootDir>/tests/.setup.js"],
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+        "html",
+        "lcov",
+        "text"
+    ],
+    "collectCoverageFrom": [
+        "./src/**/*.ts"
+    ],
+    "globals": {
+        "ts-jest": {
+            "tsconfig": "./.configs/tsconfig.test.json"
+        }
+    }
+}

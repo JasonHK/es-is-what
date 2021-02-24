@@ -1,0 +1,23 @@
+{
+    "extends": "@jasonhk/typescript-config",
+    "compilerOptions": {
+        "baseUrl": "../",
+        "rootDir": "../tests",
+        "plugins": [
+            { "transform": "typescript-transform-paths" },
+            { "transform": "typescript-transform-paths", "afterDeclarations": true },
+            { "transform": "ts-nameof", "type": "raw" }
+        ],
+        "types": [
+            "node",
+            "jest",
+            "jest-chain",
+            "jest-extended",
+            "ts-nameof"
+        ],
+        "paths": {
+            "#src/*": ["./src/*"]
+        }
+    },
+    "include": ["../tests/**/*.ts"]
+}
