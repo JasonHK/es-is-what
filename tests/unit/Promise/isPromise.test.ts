@@ -5,8 +5,14 @@ describe(nameof(isPromise), () =>
     it("should return true when the payload is a Promise instance", () =>
     {
         expect(isPromise(Promise.resolve())).toBeTrue();
-        expect(isPromise(Promise.reject())).toBeTrue();
         expect(isPromise(new Promise(() => {}))).toBeTrue();
+
+        {
+            const promise = Promise.reject();
+            promise.catch(() => {});
+
+            expect(isPromise(promise)).toBeTrue();
+        }
     });
 
     it("should return false when the payload is not a Promise instance", () =>
