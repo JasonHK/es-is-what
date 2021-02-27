@@ -1,7 +1,7 @@
-import isObject from "../Object/isObject";
+import isNullLike from "../Null/isNullLike";
 import isCallable from "../Function/isCallable";
 
 export default function isAsyncIterable<T extends AsyncIterable<unknown> = AsyncIterable<unknown>>(payload: unknown): payload is T
 {
-    return (isObject<T>(payload) && isCallable(payload[Symbol.asyncIterator]));
+    return (!isNullLike(payload) && isCallable((payload as T)[Symbol.asyncIterator]));
 }
