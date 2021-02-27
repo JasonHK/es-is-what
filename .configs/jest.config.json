@@ -23,7 +23,17 @@
     ],
     "globals": {
         "ts-jest": {
-            "tsconfig": "./.configs/tsconfig.test.json"
+            "tsconfig": "./.configs/tsconfig.test.json",
+            "babelConfig": {
+                "presets": [
+                    [
+                        "@babel/preset-env",
+                        { "targets": { "node": "current" } }
+                    ],
+                    "@babel/preset-typescript"
+                ],
+                "plugins": []
+            }
         }
     }
 }

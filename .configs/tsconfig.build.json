@@ -4,7 +4,14 @@
         "baseUrl": "../",
         "rootDir": "../src",
         "outDir": "../out",
-        "plugins": []
+        "plugins": [
+            { "transform": "typescript-transform-paths" },
+            { "transform": "typescript-transform-paths", "afterDeclarations": true },
+            { "transform": "ts-nameof", "type": "raw" }
+        ],
+        "types": [
+            "ts-nameof"
+        ]
     },
     "include": ["../src/**/*.ts"]
 }
