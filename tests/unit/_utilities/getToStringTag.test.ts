@@ -1,4 +1,4 @@
-import getToStringTag from "#src/Object/_utilities/getToStringTag";
+import getToStringTag from "#src/_utilities/getToStringTag";
 
 describe(nameof(getToStringTag), () =>
 {

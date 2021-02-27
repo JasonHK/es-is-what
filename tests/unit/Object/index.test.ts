@@ -9,7 +9,6 @@ it("should export the specified members", () =>
             "isPlainObject",
 
             // Exported from "./_utilities":
-            "hasToStringTag",
-            "getToStringTag",
+            "isPropertyKey",
         ]);
 });
