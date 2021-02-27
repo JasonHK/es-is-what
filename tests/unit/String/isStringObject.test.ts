@@ -12,5 +12,7 @@ describe(nameof(isStringObject), () =>
     {
         expect(isStringObject("")).toBeFalse();
         expect(isStringObject("foo")).toBeFalse();
+
+        expect(isStringObject({})).toBeFalse();
     });
 });
