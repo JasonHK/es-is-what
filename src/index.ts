@@ -56,8 +56,8 @@ export * from "./DataView";
 // Managing Memory
 // https://tc39.es/ecma262/#sec-managing-memory
 
-export * from "./WeakRef";
-export * from "./FinalizationRegistry";
+// export * from "./WeakRef";
+// export * from "./FinalizationRegistry";
 
 // Control Abstraction Objects
 // https://tc39.es/ecma262/#sec-control-abstraction-objects

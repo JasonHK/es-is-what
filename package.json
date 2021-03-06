@@ -27,9 +27,14 @@
     "postinstall": "ts-patch install",
     "test": "jest --config ./.configs/jest.config.json",
     "test:coverage": "npm run test -- --coverage",
+<<<<<<< HEAD
     "build:src": "./scripts/build.sh",
     "build:declare": "tsc --project ./.configs/tsconfig.build.declare.json",
     "build:docs": "typedoc --options ./.configs/typedoc.json ./src/index.ts"
+=======
+    "build:declare": "tsc --project ./.configs/tsconfig.build.declare.json",
+    "build:docs": "typedoc --tsconfig src/tsconfig.json src/index.ts"
+>>>>>>> 0a8b254dc4191aa678603e82a5d833e203edfc01
   },
   "dependencies": {
     "call-bind": "^1.0.2",
