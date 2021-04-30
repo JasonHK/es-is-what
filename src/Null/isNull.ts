@@ -1,20 +1,17 @@
 /**
- * Determine whether the payload is `null` or not.
+ * Determine whether the payload is `null`.
  * 
  * @since 0.0.1
  * 
- * @param payload An value to be determined.
+ * @param payload A value to determine.
  * @returns The assertion result.
  * 
  * @example
- * ```typescript
+ * ```ts
  * isNull(null);
  * // > true
  * 
  * isNull(undefined);
- * // > false
- * 
- * isNull({});
  * // > false
  * ```
  */

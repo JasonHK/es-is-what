@@ -1,24 +1,22 @@
 /**
- * Determine whether the payload is `undefined` or not.
+ * Determine whether the payload is `undefined`.
  * 
  * @since 0.0.1
  * 
- * @param payload An value to be determined.
+ * @param payload The value to determine.
  * @returns The assertion result.
  * 
  * @example
- * ```typescript
+ * ```ts
  * isUndefined(undefined);
  * // > true
  * 
  * isUndefined(null);
  * // > false
- * 
- * isUndefined({});
- * // > false
  * ```
  */
 export default function isUndefined(payload: unknown): payload is undefined
 {
+    // Never ever use `typeof payload === "undefined"` since `typeof document.all` is `"undefined"`.
     return (payload === undefined);
 }
