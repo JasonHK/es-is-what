@@ -2,7 +2,15 @@ import callBound from "call-bind/callBound";
 
 const $then = callBound("%Promise.prototype.then%");
 
-export default function isPromise<T extends Promise<unknown> = Promise<unknown>>(payload: unknown): payload is T
+/**
+ * Determine whether the payload is a `Promise` object.
+ *
+ * @since 0.0.1
+ * 
+ * @param payload The value to determine.
+ * @returns The assertion result.
+ */
+export default function isPromise(payload: unknown): payload is Promise<unknown>
 {
     try { $then(payload); } catch { return false; }
     return true;
