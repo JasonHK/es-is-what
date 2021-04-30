@@ -1,7 +1,7 @@
 import isNullLike from "../Null/isNullLike";
 import isCallable from "../Function/isCallable";
 
-export default function isIterable<T extends Iterable<unknown> = Iterable<unknown>>(payload: unknown): payload is T
+export default function isIterable(payload: unknown): payload is Iterable<unknown>
 {
-    return (!isNullLike(payload) && isCallable((payload as T)[Symbol.iterator]));
+    return (!isNullLike(payload) && isCallable((payload as Iterable<unknown>)[Symbol.iterator]));
 }

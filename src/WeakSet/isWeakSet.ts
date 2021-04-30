@@ -1,10 +1,10 @@
 import callBound from "call-bind/callBound";
 
-const MARKER: object = Object.create(null);
+const MARKER = {};
 
 const $has = callBound("%WeakSet.prototype.has%");
 
-export default function isWeakSet<T extends WeakSet<object> = WeakSet<object>>(payload: unknown): payload is T
+export default function isWeakSet(payload: unknown): payload is WeakSet<object>
 {
     try { $has(payload, MARKER); } catch { return false; }
     return true;
