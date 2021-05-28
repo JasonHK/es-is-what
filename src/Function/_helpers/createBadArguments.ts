@@ -1,7 +1,4 @@
-export interface BadArguments extends ArrayLike<never>
-{
-    readonly length: never;
-}
+import type BadArguments from "./BadArguments";
 
 export default function createBadArguments(marker: unknown): BadArguments
 {

@@ -1,20 +1,16 @@
+import GetIntrinsic from "get-intrinsic";
+
 import type Constructor from "./Constructor";
 
-import createBadArguments from "./_utilities/createBadArguments";
-import type { BadArguments } from "./_utilities/createBadArguments";
+import createBadArguments from "./_helpers/createBadArguments";
+import type * as $Reflect from "./_helpers/$Reflect";
 
-declare global
-{
-    namespace Reflect
-    {
-        function construct(target: unknown, argumentsList: BadArguments, newTarget?: any): never;
-    }
-}
-
-const MARKER: object = Object.create(null);
+const MARKER = {};
 const BAD_ARGUMENTS = createBadArguments(MARKER);
 
-export default function isConstructor<T extends Constructor = Constructor>(payload: unknown): payload is T
+const $construct: $Reflect.$construct = GetIntrinsic("%Reflect.construct%") as $Reflect.$construct;
+
+export default function isConstructor(payload: unknown): payload is Constructor
 {
-    try { Reflect.construct(payload, BAD_ARGUMENTS); } catch (error) { return (error === MARKER); }
+    try { $construct(payload, BAD_ARGUMENTS); } catch (error) { return (error === MARKER); }
 }
