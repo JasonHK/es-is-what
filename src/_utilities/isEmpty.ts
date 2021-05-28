@@ -28,7 +28,7 @@ export default function isEmpty(payload: unknown): boolean
     else if (isIterable(payload) && !isIteratorLike(payload))
     {
         const iteration = payload[Symbol.iterator]().next();
-        return (isIteratorResult(iteration) && (iteration.done ?? false));
+        return (isIteratorResult(iteration) && !!iteration.done);
     }
 
     return false;

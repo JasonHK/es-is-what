@@ -13,7 +13,7 @@ export default async function isEmptyAsync(payload: unknown): Promise<boolean>
     else if (isAsyncIterable(payload) && !isIteratorLike(payload))
     {
         const iteration = await payload[Symbol.asyncIterator]().next();
-        return (isIteratorResult(iteration) && (iteration.done ?? false));
+        return (isIteratorResult(iteration) && !!iteration.done);
     }
 
     return false;
