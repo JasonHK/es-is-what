@@ -1,40 +1,19 @@
 import callBound from "call-bind/callBound";
 
-import noopFalse from "../_helpers/noopFalse";
-
-interface IsSharedArrayBuffer
-{
-    /**
-     * Determine whether the payload is an `SharedArrayBuffer` object.
-     *
-     * @since 0.0.1
-     *
-     * @param payload The value to determine.
-     * @returns The assertion result.
-     */
-    (payload: unknown): payload is SharedArrayBuffer;
-}
-
 const $byteLength = callBound("%SharedArrayBuffer.prototype.byteLength%", true);
 
 /**
- * Determine whether the payload is an `SharedArrayBuffer` object.
+ * Determine whether the payload is an `SharedArrayBuffer` instance.
  *
  * @since 0.0.1
+ *
+ * @param payload The value to determine.
+ * @returns The assertion result.
  */
-let isSharedArrayBuffer: IsSharedArrayBuffer;
-
-if ($byteLength)
+export default function isSharedArrayBuffer(payload: unknown): payload is SharedArrayBuffer
 {
-    isSharedArrayBuffer = (function isSharedArrayBuffer(payload): boolean
-    {
-        try { $byteLength(payload as SharedArrayBuffer); } catch { return false; }
-        return true;
-    }) as IsSharedArrayBuffer;
-}
-else
-{
-    isSharedArrayBuffer = noopFalse as IsSharedArrayBuffer;
-}
+    if (!$byteLength) { return false; }
 
-export default isSharedArrayBuffer;
+    try { $byteLength(payload as SharedArrayBuffer); } catch { return false; }
+    return true;
+}
