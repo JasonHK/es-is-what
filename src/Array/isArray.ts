@@ -1,3 +1,5 @@
+import GetIntrinsic from "get-intrinsic";
+
 interface IsArray
 {
     /**
@@ -5,12 +7,11 @@ interface IsArray
      * 
      * @since 0.0.1
      * 
-     * @template T The expected type of the `Array`.
      * @param payload An value to be determined.
      * @returns The assertion result.
      * 
      * @example
-     * ```typescript
+     * ```ts
      * isArray([]);
      * // > true
      * 
@@ -24,7 +25,7 @@ interface IsArray
      * // > false
      * ```
      */
-    <T extends unknown[] = unknown[]>(payload: unknown): payload is T;
+    (payload: unknown): payload is unknown[];
 }
 
 /**
@@ -32,6 +33,6 @@ interface IsArray
  * 
  * @since 0.0.1
  */
-const isArray: IsArray = Array.isArray as IsArray;
+const isArray: IsArray = GetIntrinsic("%Array.isArray%");
 
 export default isArray;

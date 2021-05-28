@@ -8,8 +8,10 @@ interface GetToStringTag
 
 let getToStringTag: GetToStringTag;
 {
+    const $getOwnPropertyDescriptor = GetIntrinsic("%Reflect.getOwnPropertyDescriptor%");
+
     const $prototype = GetIntrinsic("%TypedArray.prototype%");
-    getToStringTag = callBind(Reflect.getOwnPropertyDescriptor($prototype, Symbol.toStringTag)!.get!);
+    getToStringTag = callBind($getOwnPropertyDescriptor($prototype, Symbol.toStringTag)!.get!);
 }
 
 export default getToStringTag;
