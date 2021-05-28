@@ -10,14 +10,12 @@
         ],
         "types": [
             "node",
-            "jest",
-            "jest-chain",
-            "jest-extended",
+            "mocha",
             "ts-nameof"
         ],
         "paths": {
             "#src/*": ["./src/*"]
         }
     },
-    "include": ["../tests/**/*.ts"]
+    "include": ["../test/**/*.spec.ts"]
 }
