@@ -1,7 +1,11 @@
+import type { SetOptional } from "type-fest";
+
 import isNullLike from "../Null/isNullLike";
 import isFunctionType from "../Function/isFunctionType";
 
 import isLength from "./_utilities/isLength";
+
+type MaybeArrayLike = SetOptional<ArrayLike<unknown>>;
 
 /**
  * Determine whether the payload is an array-like value or not.
@@ -31,8 +35,8 @@ import isLength from "./_utilities/isLength";
  * // > false
  * ```
  */
-export default function isArrayLike<T extends ArrayLike<unknown> = ArrayLike<unknown>>(payload: unknown): payload is T
+export default function isArrayLike(payload: unknown): payload is ArrayLike<unknown>
 {
     if (isNullLike(payload) || isFunctionType(payload)) { return false; }
-    return isLength((payload as T).length);
+    return isLength((payload as MaybeArrayLike).length);
 }

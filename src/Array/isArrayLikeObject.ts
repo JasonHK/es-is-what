@@ -1,5 +1,4 @@
 import isObject from "../Object/isObject";
-import type EnsureObject from "../Object/EnsureObject";
 
 import isArrayLike from "./isArrayLike";
 import type ArrayLikeObject from "./ArrayLikeObject";
@@ -32,7 +31,7 @@ import type ArrayLikeObject from "./ArrayLikeObject";
  * // > false
  * ```
  */
-export default function isArrayLikeObject<T extends ArrayLikeObject<unknown> = ArrayLike<unknown>>(payload: unknown): payload is EnsureObject<T>
+export default function isArrayLikeObject(payload: unknown): payload is ArrayLikeObject<unknown>
 {
     return (isArrayLike(payload) && isObject(payload));
 }
