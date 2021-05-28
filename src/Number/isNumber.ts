@@ -5,6 +5,7 @@
  * All numbers (including `NaN`, `Infinity` and `-Infinity`) will be count as a number by this
  * function.
  * 
+ * @category Number
  * @since 0.0.1
  * 
  * @param payload An object to be determined.

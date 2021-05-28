@@ -1,21 +1,17 @@
 import isNumber from "./isNumber";
 import isNaN from "./isNaN";
+import type ValidNumber from "./ValidNumber";
 
 /**
- * Determine whether the payload is a number primitive or not.
+ * Determine whether the payload is a number whose value is not `NaN`.
  * 
- * @remarks
- * All valid numbers (including `Infinity` and `-Infinity`) will be count as a number by this
- * function.
- * 
+ * @category Number
  * @since 0.0.1
  * 
  * @param payload An object to be determined.
  * @returns The assertion result.
  */
-export default function isValidNumber(payload: number): boolean;
-export default function isValidNumber(payload: unknown): payload is number;
-export default function isValidNumber(payload: unknown): boolean
+export default function isValidNumber(payload: unknown): payload is ValidNumber
 {
     return (isNumber(payload) && !isNaN(payload));
 }
